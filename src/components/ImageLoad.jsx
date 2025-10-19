@@ -1,0 +1,1 @@
+// gestiona la carga de imágenes (foto autora & proyecto)

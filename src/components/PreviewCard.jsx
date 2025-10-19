@@ -1,0 +1,1 @@
+// muestra los datos introducidos en el formulario
