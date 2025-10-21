@@ -1,5 +1,4 @@
 //  contiene los inputs
-
 import "react";
 import "../styles/form.css"
 const Form = () => {
