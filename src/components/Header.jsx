@@ -1,8 +1,16 @@
-import "../styles/header.css";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 import logo2 from "../images/logo_fondo.png";
 import menu from "../images/menu_icon.svg";
+import "../styles/header.css";
 
 const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <>
       <header className="header">
@@ -10,24 +18,24 @@ const Header = () => {
           <div className="menu">
             <img
               src={menu}
-              alt="Menu"
+              alt="Icono menú"
               className="menu-icon"
-              //onclick={toggleMenu}
+              onClick={toggleMenu}
             />
 
-            <ul className="menu-list">
+            <ul className={`menu-list ${isMenuOpen ? "menu-list--open" : ""}`}>
               <li>
-                <a href="#">Menú principal</a>
+                <Link to="/">Menú principal</Link>
               </li>
               <li>
-                <a href="#">Nuestros proyectos</a>
+                <Link to="/list">Nuestros proyectos</Link>
               </li>
               <li>
-                <a href="#">Vista previa</a>
+                <Link to="/detail">Vista previa</Link>
               </li>
             </ul>
           </div>
-          {/* <h2 className="company-name">ProyectHadas</h2> */}
+
           <img src={logo2} alt="Logo ProyectHadas" className="header-logo" />
         </div>
 

@@ -32,6 +32,10 @@
   display: none;
 }
 
+.menu-list--open {
+  display: block;
+}
+
 .menu-list li {
   margin: 0.5rem 0;
 }
@@ -40,7 +44,7 @@
   text-decoration: none;
   color: #fff;
   display: block;
-  padding: 0.5rem;
+  padding: 0.4rem;
 }
 
 .menu-list a:hover {
@@ -70,9 +74,7 @@
 }
 
 @media (min-width: 768px) {
-  .header-top {
-    justify-content: space-around;
-  }
+ 
   .company-name {
     font-size: 1.5rem;
   }
