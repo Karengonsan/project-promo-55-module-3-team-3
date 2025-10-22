@@ -1,3 +1,7 @@
+import "react"
+import Form from "../components/Form";
+import "../styles/form.css"
+
 const AddProjectPage = () => {
   return (
     <>
@@ -7,12 +11,13 @@ const AddProjectPage = () => {
         <li>Lista de proyectos</li>
       </ul>
       <img src="preview tarjeta" alt="" />
-      <form>
-        {/* Formulario para crear nuevo proyecto con 10 inputs */}
+      
+        <Form />
+        
         <button>Subir foto autora</button>
         <button>Subir foto proyecto</button>
         <button>Subir proyecto</button>
-      </form>
+      
     </>
   );
 };
