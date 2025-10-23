@@ -1,7 +1,11 @@
+import Header from "../components/Header";
+
 const ListPage = () => {
   const projects = ["Array de proyectos"];
   return (
     <>
+    <Header />
+    
       {/* Lista de proyectos */}
       <button>Link para añadir proyecto nuevo</button>
       <ul>
