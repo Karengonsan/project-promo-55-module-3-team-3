@@ -4,3 +4,11 @@
   padding: 0;
   font-family: "Poppins";
 }
+
+body{
+background-color: #2e2648;
+display: flex;
+flex-direction: column;
+justify-content: center;
+
+}

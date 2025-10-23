@@ -4,7 +4,7 @@ import InputUrl from "./InputUrl";
 import PropTypes from "prop-types";
 import "../styles/form.css";
 
-const ProjectFields = ({ data, handleChange }) => {
+const ProjectFields = ({ data, onChange }) => {
   return (
     <fieldset className="group-project">
       <legend className="sr-only">Detalles del proyecto</legend>
@@ -12,41 +12,41 @@ const ProjectFields = ({ data, handleChange }) => {
       <InputText
         name="name"
         placeholder="Nombre del proyecto"
-        value={data.name}
-        onChange={handleChange}
+        value={data.name} 
+        onChange={onChange}
       />
 
       <InputText
         name="slogan"
         placeholder="Slogan"
-        value={data.slogan}
-        onChange={handleChange}
+        value={data.slogan} 
+        onChange={onChange}
       />
       <div className="input-row">
       <InputUrl
         name="repo"
         placeholder="Repositorio"
-        value={data.repo}
-        onChange={handleChange}
+        value={data.repo} 
+        onChange={onChange}
       />
       <InputUrl
         name="demo"
         placeholder="Demo"
-        value={data.demo}
-        onChange={handleChange}
-      />
+        value={data.demo} 
+        onChange={onChange}
+       />
       </div>
       <InputText
         name="technologies"
         placeholder="Tecnologías"
-        value={data.technologies}
-        onChange={handleChange}
+        value={data.technologies} 
+        onChange={onChange}
       />
       <InputTextArea
         name="desc"
         placeholder="Descripción"
-        value={data.desc}
-        onChange={handleChange}
+        value={data.desc} 
+        onChange={onChange}
       />
     </fieldset>
   );
@@ -63,5 +63,5 @@ ProjectFields.propTypes = {
     technologies: PropTypes.string.isRequired,
     desc: PropTypes.string.isRequired,
   }).isRequired,
-  handleChange: PropTypes.func.isRequired,
+onChange: PropTypes.func.isRequired,
 };

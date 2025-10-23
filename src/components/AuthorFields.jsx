@@ -3,21 +3,21 @@ import InputText from "./InputText";
 import PropTypes from "prop-types";
 import "../styles/form.css";
 
-const AuthorFields = ({ data, handleChange }) => {
+const AuthorFields = ({ data, onChange }) => {
   return (
     <fieldset className="group-author">
       <legend className="sr-only">Datos de la autora</legend>
       <InputText
         name="autor"
         placeholder="Nombre"
-        value={data.autor}
-        onChange={handleChange}
+        value={data.autor} 
+        onChange={onChange}
       />
       <InputText
         name="job"
         placeholder="Trabajo"
         value={data.job}
-        onChange={handleChange}
+        onChange={onChange}
       />
     </fieldset>
   );
@@ -30,5 +30,5 @@ AuthorFields.propTypes = {
     autor: PropTypes.string.isRequired,
     job: PropTypes.string.isRequired,
   }).isRequired,
-  handleChange: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
 };

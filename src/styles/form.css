@@ -16,9 +16,17 @@
 }
 
 /* Contenedor principal del formulario */
+
+.form-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .form {
   display: flex;
   flex-direction: column;  
+  align-items: center;
   background: radial-gradient(circle, #4d4766, #2b1e2e);
   color: #ffffff;
   border-radius: 25px;
