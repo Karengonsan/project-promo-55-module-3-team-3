@@ -1,12 +1,13 @@
 // muestra los datos introducidos en el formulario
 
-import React from 'react'
+import 'react'
 import PropTypes from 'prop-types'
+import Avatar from '../images/avatar.webp'
 import '../styles/preview.css'
 
 
-const PreviewCard = ({name, slogan, tecnologies, repo, demo,desc, image, autor,job}) =>{
-
+const PreviewCard = ({formData}) =>{
+    const {name, slogan, tecnologies, repo, demo, image, desc, autor,job} = formData
 
     return (
         <>
@@ -21,7 +22,7 @@ const PreviewCard = ({name, slogan, tecnologies, repo, demo,desc, image, autor,j
             </div>
             <div className='preview-img'>
                 <img 
-                src={image}      
+                src={image ? image : Avatar}      
                 alt={autor}   
                 className="autor-image" 
                 />
@@ -44,7 +45,7 @@ PreviewCard.propTypes = {
   repo: PropTypes.string.isRequired,
   demo: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired, 
   autor: PropTypes.string.isRequired,
   job: PropTypes.string.isRequired,
 };
