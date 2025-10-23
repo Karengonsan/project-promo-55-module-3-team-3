@@ -1,3 +1,5 @@
+import Footer from "../components/Footer";
+
 const AddProjectPage = () => {
   return (
     <>
@@ -13,6 +15,7 @@ const AddProjectPage = () => {
         <button>Subir foto proyecto</button>
         <button>Subir proyecto</button>
       </form>
+      <Footer />
     </>
   );
 };
