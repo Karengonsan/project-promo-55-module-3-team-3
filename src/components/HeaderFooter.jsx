@@ -1,1 +1,0 @@
-//componentes estáticos
