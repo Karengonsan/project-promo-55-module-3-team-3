@@ -51,6 +51,9 @@ const ProjectFields = ({ data, handleChange }) => {
     </fieldset>
   );
 };
+
+export default ProjectFields;
+
 ProjectFields.propTypes = {
   data: PropTypes.shape({
     name: PropTypes.string.isRequired,
@@ -62,5 +65,3 @@ ProjectFields.propTypes = {
   }).isRequired,
   handleChange: PropTypes.func.isRequired,
 };
-
-export default ProjectFields;

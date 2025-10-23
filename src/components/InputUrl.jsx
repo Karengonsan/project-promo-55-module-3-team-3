@@ -18,6 +18,9 @@ const InputUrl = ({ type = "url", name, placeholder, value, onChange }) => {
   );
 };
 
+
+export default InputUrl;
+
 InputUrl.propTypes = {
   type: PropTypes.string,
   name: PropTypes.string.isRequired,
@@ -26,5 +29,3 @@ InputUrl.propTypes = {
   onChange: PropTypes.func.isRequired,
   placeholder: PropTypes.string,
 };
-
-export default InputUrl;

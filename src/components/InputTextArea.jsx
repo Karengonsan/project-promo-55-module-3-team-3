@@ -17,11 +17,11 @@ const InputTextArea = ({ name, placeholder, value, onChange }) => {
   );
 };
 
+export default InputTextArea;
+
 InputTextArea.propTypes = {
   name: PropTypes.string.isRequired,  
   value: PropTypes.string.isRequired,
   onChange: PropTypes.func.isRequired,
   placeholder: PropTypes.string,
 };
-
-export default InputTextArea;

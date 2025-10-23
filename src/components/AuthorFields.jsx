@@ -22,6 +22,9 @@ const AuthorFields = ({ data, handleChange }) => {
     </fieldset>
   );
 };
+
+export default AuthorFields;
+
 AuthorFields.propTypes = {
   data: PropTypes.shape({
     autor: PropTypes.string.isRequired,
@@ -29,5 +32,3 @@ AuthorFields.propTypes = {
   }).isRequired,
   handleChange: PropTypes.func.isRequired,
 };
-
-export default AuthorFields;
