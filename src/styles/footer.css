@@ -11,39 +11,22 @@
   margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+
 }
 
-.footer-links a {
+.footer-links p {
   text-decoration: none;
   color: #cbbde2;
   transition: color 0.3s;
 }
 
-.footer-links a:hover {
+.footer-links p:hover {
   color: #fff;
+  cursor: pointer;
 }
 
 .footer-logo {
   width: 60px;
-}
-
-.footer-copy {
-  margin-top: 1rem;
-  font-size: 0.8rem;
-  color: #cbbde2;
-}
-
-.footer-top-btn {
-  margin-top: 1rem;
-  background: none;
-  border: 1px solid #cbbde2;
-  border-radius: 20px;
-  color: #cbbde2;
-  padding: 0.4rem 0.8rem;
-  cursor: pointer;
-  font-size: 0.9rem;
-  transition: all 0.3s;
 }
 
 @media (min-width: 768px) {

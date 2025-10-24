@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import logo from "../images/logo_fondo.png";
 import "../styles/footer.css";
 
@@ -8,19 +7,19 @@ const Footer = () => {
       <footer className="footer">
         <ul className="footer-links">
           <li>
-            <Link to="/">Home</Link>
+            <p>Home</p>
           </li>
           <li>
-            <Link to="/">Sobre Nosotras</Link>
+            <p>Sobre Nosotras</p>
           </li>
           <li>
-            <Link to="/">Servicios</Link>
+            <p>Servicios</p>
           </li>
           <li>
-            <Link to="/">Contacto</Link>
+            <p>Contacto</p>
           </li>
           <li>
-            <Link to="/">Preguntas frecuentes</Link>
+            <p>Preguntas frecuentes</p>
           </li>
         </ul>
         <img src={logo} alt="Logo ProyectHadas" className="footer-logo" />
