@@ -1,8 +1,9 @@
-import { Routes, Route } from "react-router-dom";
-import AddProjectPage from "./AddProjectPage";
-import ListPage from "./ListPage";
-import DetailPage from "./DetailPage";
-import '../styles/app.css';
+import 'react'
+import { Routes, Route, } from "react-router-dom";
+import AddProjectPage from './AddProjectPage';
+import ListPage from './ListPage';
+import DetailPage from './DetailPage';
+import '../styles/app.css'
 
 
 const App = () => {
@@ -16,4 +17,4 @@ const App = () => {
   )
 }
 
-export default App
+export default App;
