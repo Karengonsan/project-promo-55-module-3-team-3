@@ -1,17 +1,17 @@
 import Header from "../components/Header.jsx";
 import PreviewCard from "../components/PreviewCard.jsx"
 import Footer from "../components/Footer.jsx";
-import PropTypes from "prop-types";
 
-const ListPage = ({formData, authorImage}) => {
+const ListPage = () => {
+  const projects = [];
+  // Crear 4 objetos/proyectos con las mismas propiedades que el formData
   return (
     <>
     <Header />
      <button>Link para añadir proyecto nuevo</button>
       <ul>
-        <li><PreviewCard formData={formData} authorImage={authorImage}/></li>
-        <li><PreviewCard formData={formData} authorImage={authorImage}/></li>
-        <li><PreviewCard formData={formData} authorImage={authorImage}/></li>
+        {/* mapear array de proyectos */}
+        <li><PreviewCard /></li>
       </ul>
       <Footer />
     </>
@@ -19,8 +19,3 @@ const ListPage = ({formData, authorImage}) => {
 };
 
 export default ListPage;
-
-ListPage.propTypes = {
-    formData: PropTypes.object.isRequired,
-    authorImage: PropTypes.string.isRequired,
-}
