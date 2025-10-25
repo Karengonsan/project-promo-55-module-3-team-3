@@ -1,15 +1,17 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import Header from "../components/Header.jsx";
+import PreviewCard from "../components/PreviewCard.jsx"
+import Footer from "../components/Footer.jsx";
+import PropTypes from "prop-types";
 
-const ListPage = () => {
+const ListPage = ({formData, authorImage}) => {
   return (
     <>
     <Header />
-    
-      {/* Lista de proyectos */}
-      <button>Link para añadir proyecto nuevo</button>
+     <button>Link para añadir proyecto nuevo</button>
       <ul>
-        <li>2-3 proyectos default</li>
+        <li><PreviewCard formData={formData} authorImage={authorImage}/></li>
+        <li><PreviewCard formData={formData} authorImage={authorImage}/></li>
+        <li><PreviewCard formData={formData} authorImage={authorImage}/></li>
       </ul>
       <Footer />
     </>
@@ -17,3 +19,8 @@ const ListPage = () => {
 };
 
 export default ListPage;
+
+ListPage.propTypes = {
+    formData: PropTypes.object.isRequired,
+    authorImage: PropTypes.string.isRequired,
+}
