@@ -2,6 +2,7 @@ import { useState } from "react";
 import Preview from "../components/Preview.jsx";
 import Header from "../components/Header.jsx";
 import Form from "../components/Form.jsx";
+import Footer from "../components/Footer";
 import "../styles/form.css";
 
 const AddProjectPage = () => {
@@ -40,6 +41,7 @@ const AddProjectPage = () => {
       <button>Subir foto autora</button>
       <button>Subir foto proyecto</button>
       <button>Subir proyecto</button>
+      <Footer />
     </>
   );
 };
