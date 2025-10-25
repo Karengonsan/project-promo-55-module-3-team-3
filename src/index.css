@@ -3,5 +3,9 @@
   line-height: 1.5;
   font-weight: 400;
   max-width: 1440px;
+  text-decoration: none;
 }
 
+main {
+  list-style: none;
+}

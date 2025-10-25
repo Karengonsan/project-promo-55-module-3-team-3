@@ -16,7 +16,7 @@ const AddProjectPage = () => {
     desc: "",
     autor: "",
     job: "",
-    });
+  });
 
   const [projectImage, setProjectImage] = useState(null);
   const [authorImage, setAuthorImage] = useState(null);
@@ -28,7 +28,6 @@ const AddProjectPage = () => {
   const updateAutorImg = (file) => {
     if (file) setAuthorImage(file);
   };
-
 
   // Función para actualizar los datos desde los inputs
   const updateForm = (ev) => {
@@ -43,13 +42,16 @@ const AddProjectPage = () => {
     <>
       <Header />
       <Form formData={formData} updateForm={updateForm} />
-      <Preview formData={formData} authorImage={authorImage} projectImage={projectImage}/>
+      <Preview
+        formData={formData}
+        authorImage={authorImage}
+        projectImage={projectImage}
+      />
       <Buttons
-          updateProjectImage={updateProjectImage}
-          updateAutorImg={updateAutorImg}
-         
-        />
-      
+        updateProjectImage={updateProjectImage}
+        updateAutorImg={updateAutorImg}
+      />
+      <Footer />
     </>
   );
 };

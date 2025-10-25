@@ -1,5 +1,3 @@
-// muestra los datos introducidos en el formulario
-
 import 'react'
 import PropTypes from 'prop-types'
 import Avatar from '../images/avatar.webp'
@@ -7,7 +5,7 @@ import '../styles/preview.css'
 
 
 const PreviewCard = ({formData, authorImage}) =>{
-    const {name, slogan, tecnologies, repo, demo, desc, autor, job} = formData
+    const {name, slogan, technologies, repo, demo, desc, autor, job} = formData
 
     return (
         <>
@@ -15,7 +13,7 @@ const PreviewCard = ({formData, authorImage}) =>{
             <div className='preview-data'>
                 <h3>{name}</h3>
                 <p>{slogan}</p>
-                <p>{tecnologies}</p>
+                <p>{technologies}</p>
                 <p>{repo}</p>
                 <p>{demo}</p>
                 <p>{desc}</p>
