@@ -1,20 +1,36 @@
 import 'react'
-import React, { useState } from "react";
 
-const Buttons = () => {
-  const [projectImage, setProjectImage] = useState(null);
-  const [authorImage, setAuthorImage] = useState(null);
 
+const Buttons = ({
+  updateImage,
+  updateAutorImg,
+ }) => {
+
+  //  Handlers locales que llaman a las funciones del padre
   const handleProjectImage = (e) => {
     const file = e.target.files[0];
-    if (file) setProjectImage(URL.createObjectURL(file));
+     if (file) {
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      updateImage(reader.result); // string base64
+    };
+    reader.readAsDataURL(file);
+  }
   };
 
   const handleAuthorImage = (e) => {
     const file = e.target.files[0];
-    if (file) setAuthorImage(URL.createObjectURL(file));
+     if (file) {
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      updateAutorImg(reader.result); // string base64
+    };
+    reader.readAsDataURL(file);
+  }
   };
+   
 
+  
   return (
     <div className="">
       <div className="">
@@ -29,20 +45,7 @@ const Buttons = () => {
         </label>
       </div>
 
-      <div className="flex gap-6">
-        {projectImage && (
-          <div>
-            <p>Imagen del proyecto:</p>
-            <img src={projectImage} alt="Proyecto" className="" />
-          </div>
-        )}
-        {authorImage && (
-          <div>
-            <p>Imagen de la autora:</p>
-            <img src={authorImage} alt="Autora" className="" />
-          </div>
-        )}
-      </div>
+    
     </div>
   );
 };
