@@ -6,8 +6,8 @@ import Avatar from '../images/avatar.webp'
 import '../styles/preview.css'
 
 
-const PreviewCard = ({formData}) =>{
-    const {name, slogan, tecnologies, repo, demo, image, desc, autor,job} = formData
+const PreviewCard = ({formData, authorImage}) =>{
+    const {name, slogan, tecnologies, repo, demo, desc, autor,job} = formData
 
     return (
         <>
@@ -22,7 +22,7 @@ const PreviewCard = ({formData}) =>{
             </div>
             <div className='preview-img'>
                 <img 
-                src={image ? image : Avatar}      
+                src={authorImage? authorImage : Avatar} 
                 alt={autor}   
                 className="autor-image" 
                 />

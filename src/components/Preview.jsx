@@ -1,20 +1,26 @@
 import 'react'
-import PreviewImage from './PreviewImage.jsx'
+import PreviewProjectImage from './PreviewProjectImage.jsx'
 import PreviewCard from './PreviewCard.jsx'
+import PropTypes from 'prop-types'
 
 
 
-
-const Preview = ({formData}) =>{
+const Preview = ({formData, projectImage, authorImage}) =>{
 
     return(
         
         <div>
-        <PreviewImage/>  
-        <PreviewCard formData={formData}/>    
+        <PreviewProjectImage projectImage={projectImage}/>  
+        <PreviewCard formData={formData} authorImage={authorImage}/>    
         </div>
         
     )
 }
 
 export default Preview
+
+Preview.propTypes = {
+    projectImage:PropTypes.string.isRequired,
+    formData: PropTypes.object.isRequired,
+    authorImage: PropTypes.string.isRequired
+}
