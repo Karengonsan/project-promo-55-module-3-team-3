@@ -6,7 +6,7 @@ const PreviewProjectImage = ({projectImage}) =>{
 
     return(
 
-        <img src={projectImage? projectImage : ImageProjectDefault } />
+        <img src={projectImage ? projectImage : ImageProjectDefault } />
         )
 }
 

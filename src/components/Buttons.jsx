@@ -2,7 +2,7 @@ import 'react'
 
 
 const Buttons = ({
-  updateImage,
+  updateProjectImage,
   updateAutorImg,
  }) => {
 
@@ -12,7 +12,7 @@ const Buttons = ({
      if (file) {
     const reader = new FileReader();
     reader.onloadend = () => {
-      updateImage(reader.result); // string base64
+      updateProjectImage(reader.result); // string base64
     };
     reader.readAsDataURL(file);
   }
