@@ -1,7 +1,7 @@
 import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const ListPage = () => {
-  const projects = ["Array de proyectos"];
   return (
     <>
     <Header />
@@ -11,6 +11,7 @@ const ListPage = () => {
       <ul>
         <li>2-3 proyectos default</li>
       </ul>
+      <Footer />
     </>
   );
 };

@@ -3,6 +3,7 @@ import Preview from "../components/Preview.jsx";
 import Header from "../components/Header.jsx";
 import Form from "../components/Form.jsx";
 import Buttons from "../components/Buttons.jsx";
+import Footer from "../components/Footer";
 import "../styles/form.css";
 
 const AddProjectPage = () => {
