@@ -39,7 +39,7 @@ export default PreviewCard
 PreviewCard.propTypes = {
   name: PropTypes.string.isRequired,
   slogan: PropTypes.string.isRequired,
-  tecnologies: PropTypes.string.isRequired,
+  technologies: PropTypes.string.isRequired,
   repo: PropTypes.string.isRequired,
   demo: PropTypes.string.isRequired,
   desc: PropTypes.string.isRequired,

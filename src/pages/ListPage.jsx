@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Header from "../components/Header.jsx";
 import PreviewCard from "../components/PreviewCard.jsx";
 import Footer from "../components/Footer.jsx";
+import { Link } from "react-router-dom";
 import "../styles/listPage.css";
 
 const defaultProjects = [
@@ -51,7 +52,7 @@ const defaultProjects = [
   },
 ];
 
-const ListPage = (formData) => {
+const ListPage = () => {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
@@ -69,7 +70,9 @@ const ListPage = (formData) => {
     <>
       <Header />
       <main>
-        <button>Link para añadir proyecto nuevo</button>
+        <Link to="/">
+          <button>Nuevo proyecto</button>
+        </Link>
         <ul>
           {projects.map((project) => (
             <li key={project.id}>

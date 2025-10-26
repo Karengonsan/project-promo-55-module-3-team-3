@@ -1,62 +1,75 @@
+/* === MOBILE FIRST === */
 main {
   color: #f5f5f5;
   min-height: 100vh;
-  padding: 2rem 1rem;
+  padding: 1.5rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 2rem;
+  box-sizing: border-box;
 }
 
-/* main button {
-  background-color: #1e90ff;
-  color: white;
+main button {
+  background-color: #8176AF;
+  color: #fff;
   font-weight: 600;
   border: none;
   border-radius: 8px;
-  padding: 0.8rem 1.5rem;
+  padding: 0.9rem 1.4rem;
   cursor: pointer;
+  width: 100%;
+  max-width: 300px;
   transition: background-color 0.3s ease;
 }
 
 main button:hover {
-  background-color: #0077e6;
-} */
+  background-color: #322D48;
+} 
 
+/* === LISTA === */
 main ul {
-  list-style: none; /* quita los puntos */
+  list-style: none; /* sin puntos */
   padding: 0;
   margin: 0;
   width: 100%;
-  max-width: 1000px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
 }
 
+/* === ITEM === */
 main li {
+  width: 100%;
+  max-width: 500px; /* limita el ancho en desktop */
   border-radius: 12px;
   padding: 1rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+  box-sizing: border-box;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
   transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 main li:hover {
   background-color: #2a2a2a;
-  transform: scale(1.02);
+  transform: scale(1.01);
 }
 
-@media (max-width: 768px) {
-  main {
-    padding: 1rem;
+/* === TABLET Y DESKTOP === */
+@media (min-width: 768px) {
+  main ul {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
   }
 
-  main ul {
-    grid-template-columns: 1fr;
-    gap: 1.2rem;
+  main li {
+    flex: 1 1 320px;
+    max-width: 450px; /* controla que no se desborde */
   }
 
   main button {
-    width: 100%;
+    width: auto;
   }
 }
