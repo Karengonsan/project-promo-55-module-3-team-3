@@ -10,7 +10,7 @@ const AuthorFields = ({ data, onChange }) => {
       <InputText
         name="autor"
         placeholder="Nombre"
-        value={data.autor} 
+        value={data.autor}
         onChange={onChange}
       />
       <InputText
