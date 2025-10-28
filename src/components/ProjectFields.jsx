@@ -12,40 +12,40 @@ const ProjectFields = ({ data, onChange }) => {
       <InputText
         name="name"
         placeholder="Nombre del proyecto"
-        value={data.name} 
+        value={data.name}
         onChange={onChange}
       />
 
       <InputText
         name="slogan"
         placeholder="Slogan"
-        value={data.slogan} 
+        value={data.slogan}
         onChange={onChange}
       />
       <div className="input-row">
-      <InputUrl
-        name="repo"
-        placeholder="Repositorio"
-        value={data.repo} 
-        onChange={onChange}
-      />
-      <InputUrl
-        name="demo"
-        placeholder="Demo"
-        value={data.demo} 
-        onChange={onChange}
-       />
+        <InputUrl
+          name="repo"
+          placeholder="Repositorio"
+          value={data.repo}
+          onChange={onChange}
+        />
+        <InputUrl
+          name="demo"
+          placeholder="Demo"
+          value={data.demo}
+          onChange={onChange}
+        />
       </div>
       <InputText
         name="technologies"
         placeholder="Tecnologías"
-        value={data.technologies} 
+        value={data.technologies}
         onChange={onChange}
       />
       <InputTextArea
         name="desc"
         placeholder="Descripción"
-        value={data.desc} 
+        value={data.desc}
         onChange={onChange}
       />
     </fieldset>
@@ -63,5 +63,5 @@ ProjectFields.propTypes = {
     technologies: PropTypes.string.isRequired,
     desc: PropTypes.string.isRequired,
   }).isRequired,
-onChange: PropTypes.func.isRequired,
+  onChange: PropTypes.func.isRequired,
 };

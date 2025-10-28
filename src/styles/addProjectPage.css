@@ -1,0 +1,15 @@
+button {
+    margin: 0 auto;
+    padding: 15px 30px;
+    border-radius: 25px;
+    border: none;
+    background: linear-gradient(to right, #c0b7e8, #8176af);
+    color: white;
+}
+button:hover {
+    background: linear-gradient(to right, #dcd5fc, #a89dd4);
+}
+
+button:active {
+    background: linear-gradient(to right, #ada5d4, #6d6397);
+}
