@@ -6,7 +6,7 @@ import Form from "../components/Form.jsx";
 import Buttons from "../components/Buttons.jsx";
 import Footer from "../components/Footer";
 import "../styles/form.css";
-import "../styles/addProjectPage.css"
+import "../styles/add-project-page.css"
 
 const AddProjectPage = () => {
   const [formData, setFormData] = useState({
