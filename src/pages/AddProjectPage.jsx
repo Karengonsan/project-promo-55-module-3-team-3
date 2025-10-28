@@ -6,6 +6,7 @@ import Form from "../components/Form.jsx";
 import Buttons from "../components/Buttons.jsx";
 import Footer from "../components/Footer";
 import "../styles/form.css";
+import "../styles/addProjectPage.css"
 
 const AddProjectPage = () => {
   const [formData, setFormData] = useState({
@@ -67,7 +68,7 @@ const AddProjectPage = () => {
         updateProjectImage={updateProjectImage}
         updateAutorImg={updateAutorImg}
       />
-      <button onClick={handleSaveProject}>Guardar proyecto</button>
+      <button className="addproject-button" onClick={handleSaveProject}>Guardar proyecto</button>
       <Footer />
     </>
   );
