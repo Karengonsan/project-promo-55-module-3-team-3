@@ -34,6 +34,7 @@
 
 .menu-list--open {
   display: block;
+  z-index: 99;
 }
 
 .menu-list li {

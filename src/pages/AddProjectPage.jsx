@@ -63,18 +63,6 @@ const AddProjectPage = () => {
       <Buttons
           updateProjectImage={updateProjectImage}
           updateAutorImg={updateAutorImg} />
-      <Footer/>  
-      
-      <Form formData={formData} updateForm={updateForm} />
-      <Preview
-        formData={formData}
-        authorImage={authorImage}
-        projectImage={projectImage}
-      />
-      <Buttons
-        updateProjectImage={updateProjectImage}
-        updateAutorImg={updateAutorImg}
-      />
       <button className="addproject-button" onClick={handleSaveProject}>Guardar proyecto</button>
       <Footer />
     </>
