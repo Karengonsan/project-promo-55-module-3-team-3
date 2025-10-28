@@ -58,6 +58,13 @@ const AddProjectPage = () => {
   return (
     <>
       <Header />
+      <Preview formData={formData} authorImage={authorImage} projectImage={projectImage}/>
+      <Form formData={formData} updateForm={updateForm} />
+      <Buttons
+          updateProjectImage={updateProjectImage}
+          updateAutorImg={updateAutorImg} />
+      <Footer/>  
+      
       <Form formData={formData} updateForm={updateForm} />
       <Preview
         formData={formData}

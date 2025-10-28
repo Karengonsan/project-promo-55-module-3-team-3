@@ -1,100 +1,36 @@
-/* --- ESTILOS BASE (MOBILE FIRST) --- */
-.preview-container {
-  display: flex;
-  flex-direction: column; /* Imagen arriba, datos abajo */
-  align-items: center;
-  text-align: center;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  max-width: 90%;
-  margin: 20px auto;
-  gap: 1.5rem;
-  transition: transform 0.2s ease, box-shadow 0.3s ease;
+/* CardProject.css */
+
+.preview-section {
+  position: relative;           /* necesario para posicionar hijos absolutos */
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
 }
 
-.preview-container:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.12);
+/* Hace que la imagen ocupe toda la base */
+.preview-section .preview-project-image {
+  width: 100%;
+  display: block;
 }
 
-/* --- Imagen y autor --- */
-.preview-img {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+/* Hace que la card se superponga */
+.preview-section .preview-card {
+  position: absolute;
+  bottom: -250px;                 /* se coloca sobre la parte inferior de la imagen */
+  left: 58.5%;
+  transform: translateX(-60%);
+  z-index: 10;                  /* se asegura de estar por encima */
+  width: 90%;
 }
-
-.preview-img .autor-image {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #00a8ff;
-  background-color: #f0f0f0; /* placeholder */
-  margin-bottom: 8px;
-}
-
-.preview-img p {
-  color: #555;
-  font-size: 0.95rem;
-}
-
-/* --- Datos del proyecto --- */
-.preview-data {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-}
-
-.preview-data h3 {
-  font-size: 1.4rem;
-  color: #333;
-  margin-bottom: 6px;
-}
-
-.preview-data p {
-  color: #666;
-  font-size: 1rem;
-  line-height: 1.4;
-  max-width: 95%;
-}
-
-/* --- ENLACES (para repo/demo) --- */
-.preview-data a {
-  color: #0077cc;
-  text-decoration: none;
-  font-weight: 500;
-}
-
-.preview-data a:hover {
-  text-decoration: underline;
-}
-
-/* --- DESKTOP / TABLET --- */
+/* Responsive */
 @media (min-width: 768px) {
-  .preview-container {
-    flex-direction: row; /* Imagen a la izquierda, datos a la derecha */
-    justify-content: space-between;
-    text-align: left;
-    max-width: 500px;
-    max-height: 400px;
-    padding: 10 px;
-    gap: 2rem;
-  }
+    .preview-section {
+        max-width: 500px;
+    }
+    .preview-section .preview-card {
+     bottom: -300px;
+     width: 95%l;
+     left: 58.5%;
 
-  .preview-img,
-  .preview-data {
-    flex: 1;
-  }
-
-  .preview-data {
-    align-items: flex-start;
-  }
-
-  .preview-data h3 {
-    font-size: 1.8rem;
-  }
+    }
 }

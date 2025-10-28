@@ -1,4 +1,5 @@
 import "react";
+import '../styles/buttons.css'
 
 const Buttons = ({ updateProjectImage, updateAutorImg }) => {
   //  Handlers locales que llaman a las funciones del padre
@@ -27,9 +28,10 @@ const Buttons = ({ updateProjectImage, updateAutorImg }) => {
   return (
     <div className="">
       <div className="">
-        <label className="">
+        <label htmlFor="project-upload" className="custom-button">
           Subir imagen del proyecto
           <input
+		  	id="project-upload"
             type="file"
             accept="image/*"
             onChange={handleProjectImage}
@@ -37,9 +39,10 @@ const Buttons = ({ updateProjectImage, updateAutorImg }) => {
           />
         </label>
 
-        <label className="">
+        <label htmlFor="author-upload" className="custom-button">
           Subir imagen de la autora
           <input
+		  	id="author-upload"
             type="file"
             accept="image/*"
             onChange={handleAuthorImage}
