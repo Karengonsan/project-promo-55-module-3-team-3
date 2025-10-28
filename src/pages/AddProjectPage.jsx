@@ -44,16 +44,31 @@ const AddProjectPage = () => {
   // Guarda el proyecto, por lo visto va aqui porque es donde está toda la info, yo pensabe que iba en el buttons, pero nop
   const handleSaveProject = () => {
     const newProject = {
-        id: crypto.randomUUID(), // Esto es para crear un id único
-        ...formData, 
-        projectImage,
-        authorImage,
+      id: crypto.randomUUID(), // Esto es para crear un id único
+      ...formData,
+      projectImage,
+      authorImage,
     };
     const storedProjects = JSON.parse(localStorage.getItem("projects")) || [];
     const updateProjects = [...storedProjects, newProject];
     localStorage.setItem("projects", JSON.stringify(updateProjects));
     navigate("/list"); // redirige al listado
-  }
+  };
+  // Handle del reset
+  const handleResetForm = () => {
+    setFormData({
+      name: "",
+      slogan: "",
+      repo: "",
+      demo: "",
+      technologies: "",
+      desc: "",
+      autor: "",
+      job: "",
+    });
+    setProjectImage(null);
+    setAuthorImage(null);
+  };
 
   return (
     <>
@@ -61,6 +76,13 @@ const AddProjectPage = () => {
       <Preview formData={formData} authorImage={authorImage} projectImage={projectImage}/>
       <Form formData={formData} updateForm={updateForm} />
       <Buttons
+        updateProjectImage={updateProjectImage}
+        updateAutorImg={updateAutorImg}
+      />
+      <button className="addproject-button" onClick={handleSaveProject}>
+        Guardar proyecto
+      </button>
+      <button className="resetproject-button" onClick={handleResetForm}>Limpiar Formulario</button>
           updateProjectImage={updateProjectImage}
           updateAutorImg={updateAutorImg} />
       <button className="addproject-button" onClick={handleSaveProject}>Guardar proyecto</button>
