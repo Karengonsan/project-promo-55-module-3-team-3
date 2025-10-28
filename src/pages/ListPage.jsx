@@ -4,6 +4,7 @@ import PreviewCard from "../components/PreviewCard.jsx";
 import Footer from "../components/Footer.jsx";
 import { Link } from "react-router-dom";
 import "../styles/listPage.css";
+import "../styles/previewCard.css";
 
 const defaultProjects = [
   {
@@ -14,7 +15,7 @@ const defaultProjects = [
     repo: "https://github.com/ejemplo/codeher",
     demo: "https://codeher.netlify.app/",
     desc: "Plataforma educativa creada por mujeres desarrolladoras para enseñar programación a principiantes mediante retos interactivos y mentorías colaborativas.",
-    autor: "Lucía Fernández",
+    autor: "Claudia Fernández",
     job: "Desarrolladora Full Stack",
   },
   {

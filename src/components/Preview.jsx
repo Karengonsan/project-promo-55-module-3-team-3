@@ -2,12 +2,17 @@ import "react";
 import PreviewProjectImage from "./PreviewProjectImage.jsx";
 import PreviewCard from "./PreviewCard.jsx";
 import PropTypes from "prop-types";
+import '../styles/preview.css'
 
 const Preview = ({ formData, projectImage, authorImage }) => {
   return (
-    <div>
-      <PreviewProjectImage projectImage={projectImage} />
-      <PreviewCard formData={formData} authorImage={authorImage} />
+    <div className="preview-section">
+      <div className="preview-project-image">
+        <PreviewProjectImage projectImage={projectImage} />
+      </div>
+      <div className="preview-card">
+        <PreviewCard formData={formData} authorImage={authorImage} />
+      </div>
     </div>
   );
 };
