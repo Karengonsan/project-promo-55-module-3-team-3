@@ -17,7 +17,7 @@
 .preview-section .preview-card {
   position: absolute;
   bottom: -250px;                 /* se coloca sobre la parte inferior de la imagen */
-  left: 60%;
+  left: 58.5%;
   transform: translateX(-60%);
   z-index: 10;                  /* se asegura de estar por encima */
   width: 90%;
@@ -29,7 +29,8 @@
     }
     .preview-section .preview-card {
      bottom: -300px;
-     width: 95%;
+     width: 95%l;
+     left: 58.5%;
 
     }
 }
