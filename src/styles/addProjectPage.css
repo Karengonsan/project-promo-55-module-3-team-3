@@ -6,3 +6,10 @@ button {
     background: linear-gradient(to right, #c0b7e8, #8176af);
     color: white;
 }
+button:hover {
+    background: linear-gradient(to right, #dcd5fc, #a89dd4);
+}
+
+button:active {
+    background: linear-gradient(to right, #ada5d4, #6d6397);
+}
