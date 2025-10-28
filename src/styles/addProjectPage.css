@@ -1,15 +1,27 @@
 button {
-    margin: 0 auto;
-    padding: 15px 30px;
-    border-radius: 25px;
-    border: none;
-    background: linear-gradient(to right, #c0b7e8, #8176af);
-    color: white;
+  display: flex; /* FLEX para centrar el contenido */
+  align-items: center; /* Centra verticalmente el texto */
+  justify-content: center; /* Centra horizontalmente el texto */
+  background: linear-gradient(90deg, #4d4766 60%, #2b1e2e 100%);
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  width: 100%;
+  max-width: 230px; /* límite de ancho */
+  margin: 8px auto; /* centra el botón en su contenedor */
+  gap: 10px;
+  font-family: "Poppins";
 }
 button:hover {
-    background: linear-gradient(to right, #dcd5fc, #a89dd4);
-}
+  background: linear-gradient(90deg, #928baf 60%, #57365f 100%);
+  transform: scale(1.03);}
 
 button:active {
-    background: linear-gradient(to right, #ada5d4, #6d6397);
-}
+  background: linear-gradient(90deg, #1a152e 60%, #231027 100%);
+  transform: scale(0.97);}
