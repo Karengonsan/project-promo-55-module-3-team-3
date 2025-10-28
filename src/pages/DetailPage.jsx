@@ -1,15 +1,19 @@
 import Header from "../components/Header";
-import PreviewProjectImage from "../components/PreviewProjectImage.jsx";
-import PreviewCard from "../components/PreviewCard.jsx";
 import Footer from "../components/Footer";
 import PropTypes from "prop-types";
+import "../styles/previewCard.css";
+import "../styles/PreviewProjectImage.css"
+import "../styles/header.css"
+import "../styles/preview.css"
+import Preview from "../components/Preview.jsx";
 
-const DetailPage = ({ projectImage, formData, authorImage }) => {
+
+
+const DetailPage = () => {
   return (
     <>
       <Header />
-      <PreviewProjectImage projectImage={projectImage} />
-      <PreviewCard formData={formData} authorImage={authorImage} />
+        <Preview />
       <Footer />
     </>
   );
