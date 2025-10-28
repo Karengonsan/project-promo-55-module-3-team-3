@@ -9,7 +9,7 @@ import '../styles/previewCard.css'
 
 
 const PreviewCard = ({formData, authorImage}) =>{
-    const {name, slogan, tecnologies, repo, demo, desc, autor, job} = formData
+    const {name, slogan, tecnologies, repo, demo, desc, autor, job} = formData || {};
 
     return (
         <>
