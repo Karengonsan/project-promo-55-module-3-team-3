@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import Header from "../components/Header.jsx";
 import PreviewCard from "../components/PreviewCard.jsx";
 import Footer from "../components/Footer.jsx";
-import "../styles/preview-card.css";
 import "../styles/list-page.css";
 
 const defaultProjects = [

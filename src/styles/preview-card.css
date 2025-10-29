@@ -1,15 +1,14 @@
 .preview-container {
   background-color: rgb(239, 238, 237);
   border-radius: 15px;
-  width: 100%;
-  max-width: 700px;
-  min-height: 240px;
+  width: 80%;
+  max-width: 500px;
+  max-height: 300px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: stretch;
-  margin: 30px auto;
-  padding: 20px 30px;
+  margin: 0 auto;
+  padding: 15px 20px;
   overflow: hidden;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
@@ -18,14 +17,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
   flex: 1.2;
-  gap: 10px;
+  gap: 0.2rem;
 }
 
 .autor-image {
-  width: 60px;
-  height: 60px;
+  max-width: 5rem;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid #00a8ff;
@@ -35,12 +32,12 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
+  gap: 0.3rem;
   text-align: center;
 }
 
 .autor-contact h4 {
-  font-size: 1.3rem;
+  font-size: 1rem;
   margin: 0;
   font-weight: bold;
 }
@@ -52,11 +49,16 @@
   line-height: 1.4;
   margin-top: 5px;
 }
-
+.disabled-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
 .contact {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  align-items: center;
+  gap: 0.7rem;
   font-size: 0.75rem;
   color: #777;
   text-align: center;
@@ -68,14 +70,15 @@
   flex-direction: column;
   justify-content: flex-start;
   gap: 6px;
+  margin: 1rem;
   padding-left: 10px;
   overflow: hidden;
 }
 
 .preview-data h2 {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   font-weight: bold;
-  margin-top: 25px;
+  margin-top: 0.5rem;
   margin-bottom: 8px;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -108,33 +111,20 @@
   height: 16px;
 }
 
-/* ✅ Ajustes para MOBILE */
-@media (max-width: 767px) {
-  .preview-container {
-    flex-direction: column; /* Imagen arriba, texto abajo */
-    align-items: center;
-    justify-content: center;
-    width: 90%; /* un poco más estrecha */
-    margin: 0 auto;
-    padding: 15px 20px; /* menos padding para que no se vea enorme */
-  }
-
+@media (max-width: 768px) {
   .preview-img {
-    flex: none;
     width: 100%;
     align-items: center;
   }
 
   .preview-data {
-    flex: none;
     width: 100%;
     padding-left: 0;
-    text-align: center;
   }
 
   .preview-data h2 {
     font-size: 1.1rem;
-    margin-top: 15px;
+    margin-top: 0.05rem;
   }
 
   .preview-data p:first-of-type,
@@ -143,10 +133,9 @@
   }
 }
 
-
 @media (min-width: 768px) {
   .preview-container {
-    max-width: 700px;
+    max-width: 500px;
     min-height: 260px;
     padding: 30px 40px;
   }

@@ -1,5 +1,5 @@
 .project-image-container {
-  width: 100%;
+  width: 90%;
   max-width: 800px;
   aspect-ratio: 1 / 1;
   margin: 20px auto;
@@ -21,10 +21,9 @@
 
 @media (min-width: 768px) {
   .project-image-container {
-    width: 600px;
+    width: 900px;
     height: 600px;
-    max-width: none;
-    margin: 40px auto; /* más espacio y sigue centrado */
+    margin: 20px; 
     aspect-ratio: auto;
   }
 

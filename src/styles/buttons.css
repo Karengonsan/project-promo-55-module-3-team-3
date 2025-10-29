@@ -18,8 +18,12 @@
   transition: background-color 0.3s ease, transform 0.1s ease;
   width: 100%;
   max-width: 230px;
-  margin: 8px auto;
+  margin: 0.5rem;
   gap: 10px;
+}
+.container-upload {
+    display: flex;
+    justify-content: center;
 }
 
 .custom-button:hover {

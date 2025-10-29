@@ -12,6 +12,7 @@ const InputTextArea = ({ name, placeholder, value, onChange }) => {
         value={value}
         onChange={onChange}
         placeholder={placeholder}
+        maxLength={200}
       />
     </>
   );

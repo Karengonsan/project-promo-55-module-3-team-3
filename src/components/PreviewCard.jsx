@@ -25,14 +25,43 @@ const PreviewCard = ({ formData, authorImage }) => {
             <h4>{autor || "Cármen Sánchez"}</h4>
             <div className="contact">
               <p>{technologies || "HTML |CSS| REACT"}</p>
-              <p className="contact-item">
-                <img src={GitHubIcon} alt="Repo" className="icon" />
-                {repo || "github.com/ejemplo"}
-              </p>
-              <p className="contact-item">
-                <img src={DemoIcon} alt="Demo" className="icon" />
-                {demo || "www.ejemplo.com"}
-              </p>
+
+              <div className="contact-item">
+                {repo ? (
+                <a
+                  href={repo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Ver repositorio en GitHub"
+                >
+                  <img src={GitHubIcon} alt="GitHub" className="icon" />
+                  <span className="placeholder">GitHub</span>
+                </a>
+              ) : (
+                <div className="disabled-link">
+                  <img src={GitHubIcon} alt="GitHub" className="icon" />
+                  <span className="placeholder">github.com/ejemplo</span>
+                </div>
+              )}
+              </div>
+              <div className="contact-item">
+                {demo ? (
+                <a
+                  href={demo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Ver demo del proyecto"
+                >
+                  <img src={DemoIcon} alt="Demo" className="icon" />
+                  <span className="placeholder">Website</span>
+                </a>
+              ) : (
+                <div className="disabled-link">
+                  <img src={DemoIcon} alt="Demo" className="icon" />
+                  <span className="placeholder">miweb.com/ejemplo</span>
+                </div>
+              )}
+              </div>
             </div>
           </div>
         </div>

@@ -33,7 +33,7 @@ const Form = ({
           <button type="submit" className="addproject-button">
             Guardar proyecto
           </button>
-          <button
+          <button 
             type="button"
             className="resetproject-button"
             onClick={handleResetForm}
