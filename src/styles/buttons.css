@@ -3,9 +3,9 @@
 }
 
 .custom-button {
-  display: flex;                           /* FLEX para centrar el contenido */
-  align-items: center;                     /* Centra verticalmente el texto */
-  justify-content: center;                 /* Centra horizontalmente el texto */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background: linear-gradient(90deg, #4d4766 60%, #2b1e2e 100%);
   color: white;
   font-size: 0.8rem;
@@ -17,14 +17,14 @@
   text-align: center;
   transition: background-color 0.3s ease, transform 0.1s ease;
   width: 100%;
-  max-width: 230px;                        /* límite de ancho */
-  margin: 8px auto;                        /* centra el botón en su contenedor */
+  max-width: 230px;
+  margin: 8px auto;
   gap: 10px;
 }
 
 .custom-button:hover {
   background: linear-gradient(90deg, #928baf 60%, #57365f 100%);
-  transform: scale(1.03);                  /* pequeño efecto hover */
+  transform: scale(1.03);
 }
 
 .custom-button:active {

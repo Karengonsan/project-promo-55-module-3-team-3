@@ -1,24 +1,23 @@
 .notfoundpage {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 100hv;
-    text-align: center;
-    color: #fff;
-    gap: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100hv;
+  text-align: center;
+  color: #fff;
+  gap: 1.5rem;
 }
 
 .notfoundpage h1 {
-    font-size: 2rem;
-    font-weight: 600;
+  font-size: 2rem;
+  font-weight: 600;
 }
 
 .notfoundpage a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: 500;
-    transition: background-color 0.3s ease, color 0.3s ease;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
-

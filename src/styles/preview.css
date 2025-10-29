@@ -1,37 +1,32 @@
-/* CardProject.css */
-
 .preview-section {
-  position: relative;           /* necesario para posicionar hijos absolutos */
+  position: relative;
   width: 100%;
   max-width: 400px;
   margin: 0 auto;
   margin-bottom: 300px;
 }
 
-/* Hace que la imagen ocupe toda la base */
 .preview-section .preview-project-image {
   width: 100%;
   display: block;
 }
 
-/* Hace que la card se superponga */
 .preview-section .preview-card {
   position: absolute;
-  bottom: -250px;                 /* se coloca sobre la parte inferior de la imagen */
+  bottom: -250px;
   left: 58.5%;
   transform: translateX(-60%);
-  z-index: 10;                  /* se asegura de estar por encima */
+  z-index: 10;
   width: 90%;
 }
-/* Responsive */
-@media (min-width: 768px) {
-    .preview-section {
-        max-width: 500px;
-    }
-    .preview-section .preview-card {
-     bottom: -300px;
-     width: 95%l;
-     left: 58.5%;
 
-    }
+@media (min-width: 768px) {
+  .preview-section {
+    max-width: 500px;
+  }
+  .preview-section .preview-card {
+    bottom: -300px;
+    width: 95%l;
+    left: 58.5%;
+  }
 }

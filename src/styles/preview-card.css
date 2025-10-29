@@ -1,31 +1,28 @@
-/* Contenedor principal */
 .preview-container {
   background-color: rgb(239, 238, 237);
   border-radius: 15px;
   width: 100%;
   max-width: 700px;
-  min-height: 240px;           /* altura mínima */
+  min-height: 240px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: stretch;
-  margin: 30px auto;           /* centra la tarjeta en la página */
+  margin: 30px auto;
   padding: 20px 30px;
-  overflow: hidden;            /* evita que el contenido se salga */
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
-/* Bloque de la autora */
 .preview-img {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  flex: 1.2;                    
-  gap: 10px;                  /* espacio entre imagen y textos */
+  flex: 1.2;
+  gap: 10px;
 }
 
-/* Imagen de la autora */
 .autor-image {
   width: 60px;
   height: 60px;
@@ -34,7 +31,6 @@
   border: 2px solid #00a8ff;
 }
 
-/* Nombre, job y textos de contacto */
 .autor-contact {
   display: flex;
   flex-direction: column;
@@ -53,11 +49,10 @@
   font-size: 0.9rem;
   margin: 0;
   color: #555;
-   line-height: 1.4;
+  line-height: 1.4;
   margin-top: 5px;
 }
 
-/* Datos de contacto extra: tecnologías, repo, demo */
 .contact {
   display: flex;
   flex-direction: column;
@@ -67,9 +62,8 @@
   text-align: center;
 }
 
-/* Bloque de datos del proyecto */
 .preview-data {
-  flex: 2;                    
+  flex: 2;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -78,19 +72,16 @@
   overflow: hidden;
 }
 
-/* Título en negrita */
 .preview-data h2 {
-  font-size: 1.3rem;      /* tamaño del título */
+  font-size: 1.3rem;
   font-weight: bold;
-  margin-top: 25px;      /* margen superior que quieres */
-  margin-bottom: 8px;   /* opcional, separa del siguiente párrafo */
-  white-space: nowrap;   
+  margin-top: 25px;
+  margin-bottom: 8px;
+  white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
 
-
-/* Segundo párrafo */
 .preview-data p:first-of-type {
   font-size: 0.85rem;
   font-weight: normal;
@@ -98,7 +89,6 @@
   margin: 0;
 }
 
-/* Descripción gris más pequeña */
 .preview-data .desc {
   font-size: 0.75rem;
   color: #777;
@@ -107,12 +97,10 @@
   overflow-wrap: break-word;
 }
 
-
 .contact-item {
   display: flex;
   align-items: center;
-   gap: 4px; /* espacio entre icono y texto */
-   
+  gap: 4px;
 }
 
 .contact-item .icon {
@@ -120,11 +108,9 @@
   height: 16px;
 }
 
-
-/* Media query para Desktop */
-@media (min-width: 1230px) {
+@media (min-width: 768px) {
   .preview-container {
-    max-width: 700px;    /* más horizontal */
+    max-width: 700px;
     min-height: 260px;
     padding: 30px 40px;
   }
@@ -156,33 +142,5 @@
 
   .preview-data .desc {
     font-size: 0.85rem;
-  }
-}
-
-/* Media query para Mobile muy pequeño */
-@media (max-width: 480px) {
-  .preview-container {
-    flex-direction: column;    /* apila la imagen sobre los datos */
-    min-height: auto;
-    max-width: 95%;
-    padding: 15px;
-  }
-
-  .preview-img {
-    flex: none;
-    margin-bottom: 10px;
-  }
-
-  .preview-data h2 {
-    font-size: 0.95rem;
-  }
-
-  .preview-data p, .preview-data .desc {
-    font-size: 0.8rem;
-  }
-
-  .autor-image {
-    width: 50px;
-    height: 50px;
   }
 }
