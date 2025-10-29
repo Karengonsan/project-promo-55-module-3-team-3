@@ -1,6 +1,6 @@
 import "react";
-import "../styles/form.css";
 import PropTypes from "prop-types";
+import "../styles/form.css";
 
 const InputTextArea = ({ name, placeholder, value, onChange }) => {
   return (
@@ -17,12 +17,11 @@ const InputTextArea = ({ name, placeholder, value, onChange }) => {
   );
 };
 
-
 InputTextArea.propTypes = {
-    name: PropTypes.string.isRequired,
-    value: PropTypes.string.isRequired,
-    onChange: PropTypes.func.isRequired,
-    placeholder: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  placeholder: PropTypes.string,
 };
 
 export default InputTextArea;

@@ -23,8 +23,6 @@ const AuthorFields = ({ data, onChange }) => {
   );
 };
 
-export default AuthorFields;
-
 AuthorFields.propTypes = {
   data: PropTypes.shape({
     autor: PropTypes.string.isRequired,
@@ -32,3 +30,5 @@ AuthorFields.propTypes = {
   }).isRequired,
   onChange: PropTypes.func.isRequired,
 };
+
+export default AuthorFields;

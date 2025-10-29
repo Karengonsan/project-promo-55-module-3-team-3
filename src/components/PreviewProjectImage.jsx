@@ -1,6 +1,6 @@
 import "react";
 import ImageProjectDefault from "../images/PreviewImage.jpg";
-import "../styles/previewProjectImage.css";
+import "../styles/preview-project-image.css";
 
 const PreviewProjectImage = ({ projectImage }) => {
   return (

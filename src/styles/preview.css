@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 /* CardProject.css */
 
 .preview-section {
@@ -36,41 +35,3 @@
 
     }
 }
-=======
-/* CardProject.css */
-
-.preview-section {
-  position: relative;           /* necesario para posicionar hijos absolutos */
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-/* Hace que la imagen ocupe toda la base */
-.preview-section .preview-project-image {
-  width: 100%;
-  display: block;
-}
-
-/* Hace que la card se superponga */
-.preview-section .preview-card {
-  position: absolute;
-  bottom: -250px;                 /* se coloca sobre la parte inferior de la imagen */
-  left: 58.5%;
-  transform: translateX(-60%);
-  z-index: 10;                  /* se asegura de estar por encima */
-  width: 90%;
-}
-/* Responsive */
-@media (min-width: 768px) {
-    .preview-section {
-        max-width: 500px;
-    }
-    .preview-section .preview-card {
-     bottom: -300px;
-     width: 95%l;
-     left: 58.5%;
-
-    }
-}
->>>>>>> Stashed changes

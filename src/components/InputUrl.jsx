@@ -1,6 +1,6 @@
 import "react";
-import "../styles/form.css";
 import PropTypes from "prop-types";
+import "../styles/form.css";
 
 const InputUrl = ({ type = "url", name, placeholder, value, onChange }) => {
   return (
@@ -18,15 +18,13 @@ const InputUrl = ({ type = "url", name, placeholder, value, onChange }) => {
   );
 };
 
-
-
 InputUrl.propTypes = {
-    type: PropTypes.string,
-    name: PropTypes.string.isRequired,
-    id: PropTypes.string.isRequired,
-    value: PropTypes.string.isRequired,
-    onChange: PropTypes.func.isRequired,
-    placeholder: PropTypes.string,
+  type: PropTypes.string,
+  name: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+  placeholder: PropTypes.string,
 };
 
 export default InputUrl;

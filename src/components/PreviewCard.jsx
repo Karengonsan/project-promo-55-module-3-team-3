@@ -3,7 +3,7 @@ import Avatar from "../images/avatar.webp";
 import GitHubIcon from "../images/github.svg";
 import DemoIcon from "../images/globe-solid.svg";
 import PropTypes from "prop-types";
-import "../styles/previewCard.css";
+import "../styles/preview-card.css";
 
 const PreviewCard = ({ formData, authorImage }) => {
   const { name, slogan, technologies, repo, demo, desc, autor, job } =

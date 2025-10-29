@@ -4,8 +4,8 @@ import Preview from "../components/Preview.jsx";
 import Footer from "../components/Footer";
 import "../styles/header.css";
 import "../styles/preview.css";
-import "../styles/PreviewProjectImage.css";
-import "../styles/previewCard.css";
+import "../styles/preview-project-image.css";
+import "../styles/preview-card.css";
 
 const DetailPage = () => {
   return (
