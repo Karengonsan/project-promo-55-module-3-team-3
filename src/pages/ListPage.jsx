@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import Header from "../components/Header.jsx";
 import PreviewCard from "../components/PreviewCard.jsx";
 import Footer from "../components/Footer.jsx";
-import { Link } from "react-router-dom";
-import "../styles/listPage.css";
 import "../styles/previewCard.css";
+import "../styles/listPage.css";
 
 const defaultProjects = [
   {

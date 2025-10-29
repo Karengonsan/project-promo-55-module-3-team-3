@@ -1,19 +1,17 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer";
 import PropTypes from "prop-types";
-import "../styles/previewCard.css";
-import "../styles/PreviewProjectImage.css"
-import "../styles/header.css"
-import "../styles/preview.css"
+import Header from "../components/Header";
 import Preview from "../components/Preview.jsx";
-
-
+import Footer from "../components/Footer";
+import "../styles/header.css";
+import "../styles/preview.css";
+import "../styles/PreviewProjectImage.css";
+import "../styles/previewCard.css";
 
 const DetailPage = () => {
   return (
     <>
       <Header />
-        <Preview />
+      <Preview />
       <Footer />
     </>
   );

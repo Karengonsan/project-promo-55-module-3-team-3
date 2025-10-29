@@ -1,6 +1,6 @@
 import InputText from "./InputText";
-import InputTextArea from "./InputTextArea";
 import InputUrl from "./InputUrl";
+import InputTextArea from "./InputTextArea";
 import PropTypes from "prop-types";
 import "../styles/form.css";
 
@@ -52,8 +52,6 @@ const ProjectFields = ({ data, onChange }) => {
   );
 };
 
-export default ProjectFields;
-
 ProjectFields.propTypes = {
   data: PropTypes.shape({
     name: PropTypes.string.isRequired,
@@ -65,3 +63,5 @@ ProjectFields.propTypes = {
   }).isRequired,
   onChange: PropTypes.func.isRequired,
 };
+
+export default ProjectFields;

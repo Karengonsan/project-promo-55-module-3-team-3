@@ -19,13 +19,14 @@ const InputUrl = ({ type = "url", name, placeholder, value, onChange }) => {
 };
 
 
-export default InputUrl;
 
 InputUrl.propTypes = {
-  type: PropTypes.string,
-  name: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
-  placeholder: PropTypes.string,
+    type: PropTypes.string,
+    name: PropTypes.string.isRequired,
+    id: PropTypes.string.isRequired,
+    value: PropTypes.string.isRequired,
+    onChange: PropTypes.func.isRequired,
+    placeholder: PropTypes.string,
 };
+
+export default InputUrl;

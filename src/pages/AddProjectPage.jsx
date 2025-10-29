@@ -1,12 +1,12 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Preview from "../components/Preview.jsx";
 import Header from "../components/Header.jsx";
+import Preview from "../components/Preview.jsx";
 import Form from "../components/Form.jsx";
 import Buttons from "../components/Buttons.jsx";
 import Footer from "../components/Footer";
 import "../styles/form.css";
-import "../styles/add-project-page.css"
+import "../styles/add-project-page.css";
 
 const AddProjectPage = () => {
   const [formData, setFormData] = useState({
@@ -73,7 +73,11 @@ const AddProjectPage = () => {
   return (
     <>
       <Header />
-      <Preview formData={formData} authorImage={authorImage} projectImage={projectImage}/>
+      <Preview
+        formData={formData}
+        authorImage={authorImage}
+        projectImage={projectImage}
+      />
       <Form formData={formData} updateForm={updateForm} />
       <Buttons
         updateProjectImage={updateProjectImage}
@@ -82,10 +86,9 @@ const AddProjectPage = () => {
       <button className="addproject-button" onClick={handleSaveProject}>
         Guardar proyecto
       </button>
-      <button className="resetproject-button" onClick={handleResetForm}>Limpiar Formulario</button>
-          updateProjectImage={updateProjectImage}
-          updateAutorImg={updateAutorImg} />
-      <button className="addproject-button" onClick={handleSaveProject}>Guardar proyecto</button>
+      <button className="resetproject-button" onClick={handleResetForm}>
+        Limpiar Formulario
+      </button>
       <Footer />
     </>
   );

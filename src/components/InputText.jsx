@@ -18,12 +18,13 @@ const InputText = ({ type = "text", name, placeholder, value, onChange }) => {
   );
 };
 
-export default InputText;
 
 InputText.protoTypes = {
-  type: PropTypes.string,
-  name: PropTypes.string.isRequired,
-  placeholder: PropTypes.string,
-  value: PropTypes.string.isRequired,
-  onChange: PropTypes.func.isRequired,
+    type: PropTypes.string,
+    name: PropTypes.string.isRequired,
+    placeholder: PropTypes.string,
+    value: PropTypes.string.isRequired,
+    onChange: PropTypes.func.isRequired,
 };
+
+export default InputText;

@@ -17,10 +17,11 @@ const Preview = ({ formData, projectImage, authorImage }) => {
   );
 };
 
-export default Preview;
 
 Preview.propTypes = {
-  projectImage: PropTypes.string.isRequired,
-  formData: PropTypes.object.isRequired,
-  authorImage: PropTypes.string.isRequired,
+    projectImage: PropTypes.string.isRequired,
+    formData: PropTypes.object.isRequired,
+    authorImage: PropTypes.string.isRequired,
 };
+
+export default Preview;
