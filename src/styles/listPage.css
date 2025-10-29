@@ -44,7 +44,7 @@ main li {
   border-radius: 12px;
   padding: 1rem;
   box-sizing: border-box;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
   transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
@@ -53,19 +53,17 @@ main li:hover {
   transform: scale(1.01);
 }
 
-@media (min-width: 768px) {
- main ul {
+@media (min-width: 1230px) {
+  main ul {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); 
-    gap: 2rem;
-    justify-items: center; 
+    grid-template-columns: 1fr;
+    gap: 3rem 4rem;       /* más espacio entre tarjetas */
+    justify-items: center;
   }
+
   main li {
-    width: 100%;
-    max-width: 450px;
-  }
-  main button {
-    width: auto;
+    max-width: 740px;     /* coincide con preview-container */
+    min-height: 260px;
   }
 }
 
