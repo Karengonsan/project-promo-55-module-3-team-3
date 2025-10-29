@@ -108,6 +108,42 @@
   height: 16px;
 }
 
+/* ✅ Ajustes para MOBILE */
+@media (max-width: 767px) {
+  .preview-container {
+    flex-direction: column; /* Imagen arriba, texto abajo */
+    align-items: center;
+    justify-content: center;
+    width: 90%; /* un poco más estrecha */
+    margin: 0 auto;
+    padding: 15px 20px; /* menos padding para que no se vea enorme */
+  }
+
+  .preview-img {
+    flex: none;
+    width: 100%;
+    align-items: center;
+  }
+
+  .preview-data {
+    flex: none;
+    width: 100%;
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .preview-data h2 {
+    font-size: 1.1rem;
+    margin-top: 15px;
+  }
+
+  .preview-data p:first-of-type,
+  .preview-data .desc {
+    font-size: 0.8rem;
+  }
+}
+
+
 @media (min-width: 768px) {
   .preview-container {
     max-width: 700px;
