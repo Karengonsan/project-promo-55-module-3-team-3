@@ -2,13 +2,13 @@ import "react";
 import '../styles/buttons.css'
 
 const Buttons = ({ updateProjectImage, updateAutorImg }) => {
-  //  Handlers locales que llaman a las funciones del padre
+
   const handleProjectImage = (e) => {
     const file = e.target.files[0];
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
-        updateProjectImage(reader.result); // string base64
+        updateProjectImage(reader.result); 
       };
       reader.readAsDataURL(file);
     }
@@ -19,7 +19,7 @@ const Buttons = ({ updateProjectImage, updateAutorImg }) => {
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
-        updateAutorImg(reader.result); // string base64
+        updateAutorImg(reader.result); 
       };
       reader.readAsDataURL(file);
     }

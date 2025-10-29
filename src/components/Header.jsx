@@ -30,9 +30,6 @@ const Header = () => {
               <li>
                 <Link to="/list">Nuestros proyectos</Link>
               </li>
-              <li>
-                <Link to="/detail">Vista previa</Link>
-              </li>
             </ul>
           </div>
 

@@ -8,10 +8,13 @@ const Preview = ({ formData, projectImage, authorImage }) => {
   return (
     <div className="preview-section">
       <div className="preview-project-image">
-        <PreviewProjectImage projectImage={projectImage} />
+        <PreviewProjectImage 
+        projectImage={projectImage} />
       </div>
       <div className="preview-card">
-        <PreviewCard formData={formData} authorImage={authorImage} />
+        <PreviewCard 
+        formData={formData} 
+        authorImage={authorImage} />
       </div>
     </div>
   );

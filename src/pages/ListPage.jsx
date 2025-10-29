@@ -77,7 +77,12 @@ const ListPage = () => {
         <ul>
           {projects.map((project) => (
             <li key={project.id}>
-              <PreviewCard formData={project} />
+              <Link to={`/detail/${project.id}`}>
+                <PreviewCard
+                  formData={project}
+                  authorImage={project.authorImage}
+                />
+              </Link>
             </li>
           ))}
         </ul>

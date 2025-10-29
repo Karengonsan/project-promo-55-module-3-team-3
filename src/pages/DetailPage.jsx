@@ -1,4 +1,4 @@
-import PropTypes from "prop-types";
+import { useParams } from "react-router-dom";
 import Header from "../components/Header";
 import Preview from "../components/Preview.jsx";
 import Footer from "../components/Footer";
@@ -8,19 +8,24 @@ import "../styles/preview-project-image.css";
 import "../styles/preview-card.css";
 
 const DetailPage = () => {
+  const { id } = useParams();
+  const projects = JSON.parse(localStorage.getItem("projects")) || [];
+  const project = projects.find((item) => item.id === id);
+  
+  if (!project) {
+    return <p>Proyecto no encontrado</p>;
+  }
   return (
     <>
       <Header />
-      <Preview />
+      <Preview
+        formData={project}
+        projectImage={project.projectImage}
+        authorImage={project.authorImage}
+      />
       <Footer />
     </>
   );
-};
-
-DetailPage.propTypes = {
-  projectImage: PropTypes.string.isRequired,
-  formData: PropTypes.object.isRequired,
-  authorImage: PropTypes.string.isRequired,
 };
 
 export default DetailPage;

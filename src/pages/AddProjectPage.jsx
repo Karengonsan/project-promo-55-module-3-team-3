@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import Header from "../components/Header.jsx";
 import Preview from "../components/Preview.jsx";
 import Form from "../components/Form.jsx";
-import Buttons from "../components/Buttons.jsx";
 import Footer from "../components/Footer";
 import "../styles/form.css";
 import "../styles/add-project-page.css";
@@ -22,17 +21,16 @@ const AddProjectPage = () => {
 
   const [projectImage, setProjectImage] = useState(null);
   const [authorImage, setAuthorImage] = useState(null);
-  const navigate = useNavigate(); // Para redirigir entre rutas, por lo visto
+  const navigate = useNavigate();
 
-  const updateProjectImage = (file) => {
-    if (file) setProjectImage(file);
+  const updateProjectImage = (base64Image) => {
+    setProjectImage(base64Image);
   };
 
-  const updateAutorImg = (file) => {
-    if (file) setAuthorImage(file);
+  const updateAutorImg = (base64Image) => {
+    setAuthorImage(base64Image);
   };
 
-  // Función para actualizar los datos desde los inputs
   const updateForm = (ev) => {
     const { name, value } = ev.target;
     setFormData({
@@ -41,10 +39,9 @@ const AddProjectPage = () => {
     });
   };
 
-  // Guarda el proyecto, por lo visto va aqui porque es donde está toda la info, yo pensabe que iba en el buttons, pero nop
   const handleSaveProject = () => {
     const newProject = {
-      id: crypto.randomUUID(), // Esto es para crear un id único
+      id: crypto.randomUUID(),
       ...formData,
       projectImage,
       authorImage,
@@ -52,9 +49,9 @@ const AddProjectPage = () => {
     const storedProjects = JSON.parse(localStorage.getItem("projects")) || [];
     const updateProjects = [...storedProjects, newProject];
     localStorage.setItem("projects", JSON.stringify(updateProjects));
-    navigate("/list"); // redirige al listado
+    navigate("/list");
   };
-  // Handle del reset
+
   const handleResetForm = () => {
     setFormData({
       name: "",
@@ -78,17 +75,14 @@ const AddProjectPage = () => {
         authorImage={authorImage}
         projectImage={projectImage}
       />
-      <Form formData={formData} updateForm={updateForm} />
-      <Buttons
+      <Form
+        formData={formData}
+        updateForm={updateForm}
         updateProjectImage={updateProjectImage}
         updateAutorImg={updateAutorImg}
+        handleSaveProject={handleSaveProject}
+        handleResetForm={handleResetForm}
       />
-      <button className="addproject-button" onClick={handleSaveProject}>
-        Guardar proyecto
-      </button>
-      <button className="resetproject-button" onClick={handleResetForm}>
-        Limpiar Formulario
-      </button>
       <Footer />
     </>
   );
