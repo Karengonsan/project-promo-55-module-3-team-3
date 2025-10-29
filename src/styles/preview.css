@@ -1,32 +1,40 @@
 .preview-section {
   position: relative;
   width: 100%;
-  max-width: 400px;
+  max-width: 800px; /* más flexible, deja respirar la imagen */
   margin: 0 auto;
   margin-bottom: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* 🔹 centra horizontalmente */
 }
 
+/* La imagen ocupa toda la base */
 .preview-section .preview-project-image {
   width: 100%;
-  display: block;
+  display: flex;
+  justify-content: center;
 }
 
+/* La tarjeta se superpone centrada */
 .preview-section .preview-card {
   position: absolute;
   bottom: -250px;
-  left: 58.5%;
-  transform: translateX(-60%);
+  left: 50%;
+  transform: translateX(-50%); /* 🔹 centra horizontalmente */
   z-index: 10;
   width: 90%;
 }
 
 @media (min-width: 768px) {
   .preview-section {
-    max-width: 500px;
+    max-width: 900px;
   }
+
   .preview-section .preview-card {
     bottom: -300px;
-    width: 95%l;
-    left: 58.5%;
+    width: 95%;
+    left: 50%;
+    transform: translateX(-50%);
   }
 }

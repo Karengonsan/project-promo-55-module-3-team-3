@@ -5,7 +5,12 @@
   margin: 20px auto;
   overflow: hidden;
   border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
 
 .project-image-container img {
   width: 100%;
@@ -16,9 +21,10 @@
 
 @media (min-width: 768px) {
   .project-image-container {
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 600px;
     max-width: none;
+    margin: 40px auto; /* más espacio y sigue centrado */
     aspect-ratio: auto;
   }
 
